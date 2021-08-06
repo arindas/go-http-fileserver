@@ -8,19 +8,21 @@ This is a simple, lightweight HTTP fileserver that can be run easily from the co
 *Warning: this does not have any security settings whatsoever.  Anything within any directory below that specified when this is launched will be available from your machine on whatever network can access it!*
 
 
-## Installation ##
+## Build ##
 
-Install **go 1.1+** and setup [GOPATH](http://golang.org/doc/code.html#GOPATH) and GOBIN.  Then:
+### Pre-requisites
+- `go 1.11+`
+
+### Steps
+Simply clone the repository outside of `$GOPATH` and build with `go build`
 
 ```
-//Dependencies
-> go get github.com/codegangsta/cli
-> go get github.com/codegangsta/negroni
-> go get github.com/phyber/negroni-gzip/gzip
-
-> go get github.com/consbio/go-http-fileserver
+git clone https://github.com/arindas/go-http-fileserver.git
+cd go-http-fileserver/
+go build
 ```
 
+Now feel free to place the produced binary on your `$PATH`
 
 ## Usage ##
 
